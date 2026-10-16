@@ -1,3 +1,4 @@
 *.mp4 binary
 *.png binary
 *.webp binary
+*.py -text
