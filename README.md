@@ -4,7 +4,7 @@
 
 A silent, 12-second UI animation exploring the trade-offs between unit price, minimum order quantity and lead time. Three fictional supplier cards enter in sequence, a single MOQ filter narrows the comparison, and the final state holds for reading.
 
-[Watch or download the full MP4](hx-works-quote-comparison-motion-study.mp4) · [Open the offline player](index.html)
+[Watch or download the full MP4](hx-works-quote-comparison-motion-study.mp4) · [Offline player source — download before use](index.html)
 
 ![Animated preview of the fictional quote-comparison interface](quote-comparison-motion.webp)
 
