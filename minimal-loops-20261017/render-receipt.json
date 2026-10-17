@@ -1,0 +1,70 @@
+{
+  "source_sha256": "3990c8079dbd6bc37f06c55730b7eb05e6d0c41fa2b5b59f1a4f8a742f4f4cb7",
+  "python": "3.11.15",
+  "tool_version": "ffmpeg version N-92722-gf22fcd4483 Copyright (c) 2000-2018 the FFmpeg developers",
+  "authorship": "Self-initiated code-authored fictional corporate/life typography loops, no customer or travel footage, no external assets/music/font redistribution.",
+  "limitations": "Not travel-footage editing or client work. No engagement or buyer acceptance claim. Audio perceptual quality not independently verified. Actual player behavior still requires native observation.",
+  "outputs": [
+    {
+      "file": "hx-tabs-loop.mp4",
+      "sha256": "1f55536983e08571a4c709feb70ee7c6414ee58df3f2b7c8b9e484f516fe07d9",
+      "bytes": 225475,
+      "decoded_frames": 180,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "seconds": 6,
+      "audio": {
+        "peak_linear": 0.13892136758475743,
+        "rms_linear": 0.01598125985437204,
+        "sample_frames": 288000,
+        "events_seconds": [
+          0.4,
+          0.82,
+          1.24,
+          2.6,
+          3.9
+        ],
+        "third_party_samples": false,
+        "perceptual_listening": "Not independently verified"
+      },
+      "source_at_0_and_6_identical": true,
+      "render_seconds": 42.06199999997625,
+      "decoded_aac": {
+        "sample_frames": 288768,
+        "peak_linear": 0.13886390626430511,
+        "clipped_sample_count": 0
+      }
+    },
+    {
+      "file": "hx-call-loop.mp4",
+      "sha256": "19ecb8f493e08d4fe48959504a90bd0907470a862f7bd4485d50d06681c2eec2",
+      "bytes": 172660,
+      "decoded_frames": 180,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "seconds": 6,
+      "audio": {
+        "peak_linear": 0.11119142249495223,
+        "rms_linear": 0.016166259198843767,
+        "sample_frames": 288000,
+        "events_seconds": [
+          0.45,
+          0.68,
+          2.45,
+          4.08
+        ],
+        "third_party_samples": false,
+        "perceptual_listening": "Not independently verified"
+      },
+      "source_at_0_and_6_identical": true,
+      "render_seconds": 19.07900000002701,
+      "decoded_aac": {
+        "sample_frames": 288768,
+        "peak_linear": 0.11119143664836884,
+        "clipped_sample_count": 0
+      }
+    }
+  ]
+}
