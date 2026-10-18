@@ -1,0 +1,188 @@
+{
+  "width": 540,
+  "height": 960,
+  "fps": 24,
+  "source": "preparation\\demos\\editable-sprite-probe-20261016\\frames",
+  "disclosure": "One self-initiated fictional coded-scene study, two edits; not gameplay, client work or a full application.",
+  "edl": {
+    "source": [
+      [
+        0,
+        8,
+        0,
+        1
+      ]
+    ],
+    "chronological": [
+      [
+        0,
+        2.5,
+        0,
+        1.45
+      ],
+      [
+        2.5,
+        3.5,
+        3.625,
+        0.675
+      ],
+      [
+        3.5,
+        4.5,
+        4.3,
+        0
+      ],
+      [
+        4.5,
+        7,
+        4.3,
+        1
+      ]
+    ],
+    "cold-open": [
+      [
+        0,
+        0.75,
+        4.3,
+        0.4
+      ],
+      [
+        0.75,
+        1.5,
+        4.3,
+        0
+      ],
+      [
+        1.5,
+        3.5,
+        0,
+        1.85
+      ],
+      [
+        3.5,
+        4.5,
+        3.7,
+        0.6
+      ],
+      [
+        4.5,
+        7,
+        4.3,
+        1
+      ]
+    ]
+  },
+  "captions": {
+    "chronological": [
+      [
+        0,
+        2.5,
+        "QUICK DELIVERY."
+      ],
+      [
+        2.5,
+        3.5,
+        "DOOR: NOT TODAY."
+      ],
+      [
+        3.5,
+        4.5,
+        "PERFECT TIMING."
+      ],
+      [
+        4.5,
+        7,
+        "DELIVERY: ATTEMPTED."
+      ]
+    ],
+    "cold-open": [
+      [
+        0,
+        1.5,
+        "ONE JOB."
+      ],
+      [
+        1.5,
+        3.5,
+        "3 SECONDS EARLIER..."
+      ],
+      [
+        3.5,
+        4.5,
+        "ALMOST THERE."
+      ],
+      [
+        4.5,
+        7,
+        "THE PARCEL DISAGREED."
+      ]
+    ]
+  },
+  "audio_events_seconds": {
+    "source": [
+      [
+        3.7,
+        300
+      ],
+      [
+        4.3,
+        120
+      ]
+    ],
+    "chronological": [
+      [
+        2.61,
+        300
+      ],
+      [
+        3.5,
+        120
+      ],
+      [
+        4.5,
+        170
+      ]
+    ],
+    "cold-open": [
+      [
+        0,
+        120
+      ],
+      [
+        1.5,
+        650
+      ],
+      [
+        3.5,
+        300
+      ],
+      [
+        4.5,
+        120
+      ]
+    ]
+  },
+  "outputs": {
+    "source": {
+      "file": "hx-fictional-scene-source.mp4",
+      "bytes": 112178,
+      "sha256": "d055d717c9a067401e71fefe20ad3c1142e8064abfee29d718f9e52c06c0131e",
+      "duration": 8,
+      "frames": 192
+    },
+    "chronological": {
+      "file": "hx-fictional-scene-chronological.mp4",
+      "bytes": 147062,
+      "sha256": "8f4c533c9bcdc8784d3220c8156d20f5fd03907ecc012b168a48cf7c6a4d2e7c",
+      "duration": 7,
+      "frames": 168
+    },
+    "cold-open": {
+      "file": "hx-fictional-scene-cold-open.mp4",
+      "bytes": 152122,
+      "sha256": "260f83c4f65a1c5eb3c01236db83839052dcbca2bc915b9fca3557ac8c15e3c8",
+      "duration": 7,
+      "frames": 168
+    }
+  }
+}

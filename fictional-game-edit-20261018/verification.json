@@ -1,0 +1,63 @@
+{
+  "scope": "Final encoded video/audio decoding, sampled visual frames, frame count and synthesized event timing. No subjective auditory or buyer-style acceptance.",
+  "outputs": {
+    "source": {
+      "file": "hx-fictional-scene-source.mp4",
+      "sha256": "d055d717c9a067401e71fefe20ad3c1142e8064abfee29d718f9e52c06c0131e",
+      "decoded_frames": 192,
+      "video_seconds_at_24fps": 8.0,
+      "sampled_decoded_frame_sha256": [
+        "96b53ba16c2b32e8fbd9f27dd20fa070183c3baa894ccb59a4be99e967c602bb",
+        "c3d2eac9910a2a481b46c7c46d7aea9f52b228569bce54b450eb41a53f92e06f",
+        "462e9a4fc0194e49ce0fea828f838642f2cce69950f7acc3ed8a7ab9082999d2"
+      ],
+      "audio_decoded_seconds": 8.010884353741497,
+      "audio_absolute_peak": 0.23529052734375,
+      "event_energy_within_40ms": {
+        "3.7": true,
+        "4.3": true
+      },
+      "decode_exit": 0
+    },
+    "chronological": {
+      "file": "hx-fictional-scene-chronological.mp4",
+      "sha256": "8f4c533c9bcdc8784d3220c8156d20f5fd03907ecc012b168a48cf7c6a4d2e7c",
+      "decoded_frames": 168,
+      "video_seconds_at_24fps": 7.0,
+      "sampled_decoded_frame_sha256": [
+        "35c578ba3566f755d287cc8055efa2922e39de9ddfd1b90e0b293e6b9fee29a4",
+        "f042208fd6f0aff837c828d3af0fba90c7df571eaf0ddc15da10b368332bc3fc",
+        "2bc3c6c2320ebffc88bc8b4113a4a623c0a4dd81dd61f093f4e1566f0499c2b9"
+      ],
+      "audio_decoded_seconds": 7.012426303854875,
+      "audio_absolute_peak": 0.2352294921875,
+      "event_energy_within_40ms": {
+        "2.61": true,
+        "3.5": true,
+        "4.5": true
+      },
+      "decode_exit": 0
+    },
+    "cold-open": {
+      "file": "hx-fictional-scene-cold-open.mp4",
+      "sha256": "260f83c4f65a1c5eb3c01236db83839052dcbca2bc915b9fca3557ac8c15e3c8",
+      "decoded_frames": 168,
+      "video_seconds_at_24fps": 7.0,
+      "sampled_decoded_frame_sha256": [
+        "7d6496e30f7fc726671e41414629106fbf0189d9649d49706a6ac8d3e037052b",
+        "564c4bc660e96ec4d7440efac5d11bbc5a9dc61880fd7a8f1088ddd455500dc1",
+        "e2581d944913441f426dcc1d371c6ba8871b84028ae0bb548d69e7be169fd893"
+      ],
+      "audio_decoded_seconds": 7.012426303854875,
+      "audio_absolute_peak": 0.237762451171875,
+      "event_energy_within_40ms": {
+        "0": true,
+        "1.5": true,
+        "3.5": true,
+        "4.5": true
+      },
+      "decode_exit": 0
+    }
+  },
+  "visual_sheet": "contact-sheet.jpg (sampled from final encoded MP4s, not source drawings)"
+}
