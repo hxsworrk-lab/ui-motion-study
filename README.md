@@ -12,6 +12,7 @@ Inspect the output, the source and the checks behind it. These are self-initiate
 | [Native n8n HTTP workflow checks](n8n-http-validation/) | Workflow generator, synthetic HTTP fixtures and recorded execution checks. | Seven controlled scenarios cover transient failures, retry bounds, batch validation and within-batch deduplication. Real Google Sheets, OAuth and production reliability remain untested. |
 | [Editable supplier decision deck](supplier-decision/) | Three slides, editable text and a native PowerPoint table, plus rendered previews. | The fictional cost comparison and its decision threshold were checked. Desktop PowerPoint and arbitrary conversions remain untested. |
 | [Architectural openings](architectural-openings/) | Named Blender geometry, a GLB export, dimensions and fresh-import checks. | Fourteen checks examine the actual opening geometry. This is a conceptual layout; it carries no building-code, structural or construction approval. |
+| [Contour-constrained curved relief](curved-relief-study/) | A synthetic STL, Blender source and fresh-import checks. | Contour-aligned analytic geometry and basic topology only; arbitrary STL editing, slicers, physical printing and can fit are untested. |
 
 ## Motion examples
 

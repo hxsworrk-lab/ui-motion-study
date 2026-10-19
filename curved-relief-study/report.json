@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "statistics": {
+    "vertex_count": 4466,
+    "triangle_count": 8928,
+    "boundary_edge_count": 0,
+    "non_manifold_edge_count": 0,
+    "inconsistent_directed_edge_count": 0,
+    "degenerate_triangle_count": 0,
+    "finite_coordinates": true,
+    "signed_volume_mm3": 884.7818116578876,
+    "surface_area_mm2": 1040.517512476888,
+    "connected_components": 1,
+    "bbox_mm": [
+      [
+        -9.838032722473145,
+        9.838032722473145
+      ],
+      [
+        28.547039031982422,
+        32.79999923706055
+      ],
+      [
+        -11.0,
+        11.0
+      ]
+    ],
+    "bbox_dimensions_mm": [
+      19.67606544494629,
+      4.252960205078125,
+      22.0
+    ],
+    "measured_inner_radius_range_mm": [
+      29.999999074569256,
+      30.000000874148785
+    ],
+    "measured_outer_radius_range_mm": [
+      31.999999074946686,
+      32.800001792387704
+    ],
+    "conservative_radial_material_gap_mm": 1.9999982007979007,
+    "radial_gap_is_global_thinnest_distance": false
+  },
+  "cdt": {
+    "input_constrained_segments": 434,
+    "covered_segments": 434,
+    "uv_vertices": 2233,
+    "uv_triangles": 4128,
+    "epsilon_mm": 1e-06,
+    "grid_mm": 0.5,
+    "maximum_input_contour_segment_mm": 0.4,
+    "raised_height_mm": 0.8,
+    "ramp_mm": 0.4
+  },
+  "comparison": "left previous regular-grid / right constrained contour; both same material; no smooth-shading modifier",
+  "seconds": 0.06167316436767578,
+  "blender": "5.2.1 LTS",
+  "limits": [
+    "Synthetic analytic raised cross patch only.",
+    "Not buyer STL/pattern processing, arbitrary mesh repair, print or fit validation.",
+    "Radial coordinate gap is not global minimum physical thickness."
+  ],
+  "fresh_native_stl_import": {
+    "statistics": {
+      "vertex_count": 4466,
+      "triangle_count": 8928,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "inconsistent_directed_edge_count": 0,
+      "degenerate_triangle_count": 0,
+      "finite_coordinates": true,
+      "signed_volume_mm3": 884.7818116578876,
+      "surface_area_mm2": 1040.517512476888,
+      "connected_components": 1,
+      "bbox_mm": [
+        [
+          -9.838032722473145,
+          9.838032722473145
+        ],
+        [
+          28.547039031982422,
+          32.79999923706055
+        ],
+        [
+          -11.0,
+          11.0
+        ]
+      ],
+      "bbox_dimensions_mm": [
+        19.67606544494629,
+        4.252960205078125,
+        22.0
+      ],
+      "measured_inner_radius_range_mm": [
+        29.999999074569256,
+        30.000000874148785
+      ],
+      "measured_outer_radius_range_mm": [
+        31.999999074946686,
+        32.800001792387704
+      ],
+      "conservative_radial_material_gap_mm": 1.9999982007979007,
+      "radial_gap_is_global_thinnest_distance": false
+    },
+    "max_bbox_coordinate_deviation_mm": 0.0
+  }
+}
