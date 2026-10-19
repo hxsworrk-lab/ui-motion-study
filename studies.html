@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; object-src 'none'; form-action 'none'">
+  <meta name="description" content="Hx Works project studies: a runnable browser comparison, an editable presentation and inspectable Blender geometry. Outputs, source files and the limits of the checks.">
+  <title>Project studies — Hx Works</title>
+  <style>
+    :root { color-scheme: light; --ink:#172b36; --muted:#566773; --line:#d9e1e4; --paper:#f6f7f5; --blue:#1a4ac7; font-family: "Segoe UI",system-ui,sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-padding-top:24px; }
+    body { margin:0; background:var(--paper); color:var(--ink); line-height:1.6; }
+    a { color:var(--blue); text-underline-offset:4px; text-decoration-thickness:1px; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible,summary:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
+    .skip { position:absolute; left:20px; top:-100px; padding:8px 14px; background:white; z-index:2; }
+    .skip:focus { top:12px; }
+    .wrap { max-width:1120px; margin:auto; padding-inline:28px; }
+    header { border-bottom:1px solid var(--line); }
+    .header-row { display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:72px; }
+    .brand { color:var(--ink); font-size:21px; font-weight:750; text-decoration:none; letter-spacing:-.04em; white-space:nowrap; }
+    .repo { font-size:14px; }
+    .hero { padding:36px 0 20px; }
+    .eyebrow { margin:0 0 16px; color:var(--blue); font-size:12px; letter-spacing:.16em; font-weight:700; text-transform:uppercase; }
+    h1 { margin:0; max-width:900px; font-size:clamp(36px,4.7vw,56px); letter-spacing:-.05em; line-height:1.12; font-weight:650; }
+    .intro { max-width:760px; margin:18px 0; color:var(--muted); font-size:18px; }
+    .provenance { border-left:3px solid var(--blue); padding:2px 0 2px 16px; max-width:690px; font-size:14px; color:var(--muted); }
+    .jump { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:24px; padding-block:16px; border-block:1px solid var(--line); font-size:14px; }
+    .jump a { color:var(--ink); }
+    .study { padding:32px 0 44px; border-bottom:1px solid var(--line); }
+    .study-head { display:grid; grid-template-columns:48px 1fr; gap:16px; margin-bottom:26px; }
+    .number { color:var(--blue); font-size:13px; padding-top:8px; font-variant-numeric:tabular-nums; }
+    .category { margin:0 0 6px; color:var(--muted); font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
+    h2 { font-size:clamp(27px,3.2vw,40px); letter-spacing:-.04em; line-height:1.2; font-weight:650; margin:0; }
+    .study-grid { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:34px; align-items:start; }
+    .copy p { margin:0 0 17px; }
+    .copy h3 { margin:22px 0 6px; font-size:14px; }
+    .copy ul { margin:0; padding-left:21px; }
+    .copy li { margin-bottom:7px; }
+    .limit { color:var(--muted); font-size:14px; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; margin-top:24px; font-size:14px; }
+    .primary { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:9px 15px; background:var(--blue); color:white; text-decoration:none; border-radius:4px; }
+    .primary:hover { background:#153da4; text-decoration:underline; }
+    figure { margin:0; min-width:0; }
+    figure img { display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:5px; }
+    figcaption { font-size:12px; color:var(--muted); margin-top:10px; }
+    .comparison { background:#fff; border:1px solid var(--line); border-radius:5px; padding:26px; }
+    .comparison-label { color:var(--muted); font-size:13px; margin:0 0 20px; }
+    .results { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .result { min-width:0; background:#f0f3f8; padding:18px; border-top:3px solid var(--blue); }
+    .result:first-child { border-color:#a65233; background:#faf2ed; }
+    .result span { display:block; font-size:13px; }
+    .result strong { display:block; font-size:66px; line-height:1.2; font-weight:550; font-variant-numeric:tabular-nums; }
+    .comparison-note { color:var(--muted); font-size:12px; margin:20px 0 0; }
+    .motion { padding:44px 0; }
+    .motion h2 { font-size:27px; }
+    .motion > p { color:var(--muted); max-width:640px; }
+    .motion-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-top:24px; }
+    .motion-list article { border-top:2px solid var(--line); padding-top:15px; }
+    .motion-list h3 { font-size:17px; margin:0 0 7px; }
+    .motion-list p { color:var(--muted); font-size:14px; margin:0 0 14px; }
+    .motion-list a { font-size:14px; }
+    footer { background:#eaf0f3; padding:30px 0; margin-top:12px; font-size:13px; color:var(--muted); }
+    footer p { margin:0 0 8px; max-width:760px; }
+    @media(max-width:740px) {
+      .wrap { padding-inline:22px; }
+      .header-row { min-height:72px; gap:12px; }
+      .hero { padding-top:42px; }
+      .intro { font-size:18px; }
+      .study { padding-block:34px; }
+      .study-head { grid-template-columns:30px 1fr; gap:8px; margin-bottom:22px; }
+      .study-grid { grid-template-columns:1fr; gap:24px; }
+      .comparison { padding:20px; }
+      .result { padding:13px; }
+      .motion-list { grid-template-columns:1fr; gap:25px; }
+      .jump { gap:10px 20px; }
+    }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to studies</a>
+  <header><div class="wrap header-row">
+    <a class="brand" href="studies.html" aria-label="Hx Works project studies">Hx Works</a>
+    <a class="repo" href="https://github.com/hxsworrk-lab/ui-motion-study">Repository ↗</a>
+  </div></header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Project documentation</p>
+      <h1 id="page-title">Outputs, source, evidence.</h1>
+      <p class="intro">Selected Hx Works studies in browser behavior, editable presentations and 3D geometry.</p>
+      <p class="provenance">Self-initiated studies with fictional or synthetic inputs. No paid client projects are presented here.</p>
+      <nav class="jump" aria-label="Study sections">
+        <a href="#browser">01 / Browser behavior</a><a href="#deck">02 / Editable deck</a><a href="#geometry">03 / Blender geometry</a><a href="#motion">Motion studies</a>
+      </nav>
+    </section>
+
+    <section class="study" id="browser" aria-labelledby="browser-title">
+      <div class="study-head"><span class="number">01</span><div><p class="category">Svelte 5.23.2 · Controlled comparison</p><h2 id="browser-title">Cleanup is a behavior to test.</h2></div></div>
+      <div class="study-grid">
+        <figure class="comparison">
+          <p class="comparison-label">Recorded mock <code>close()</code> calls after component unmount</p>
+          <div class="results"><div class="result"><span>Async callback</span><strong>0</strong></div><div class="result"><span>Synchronous return</span><strong>1</strong></div></div>
+          <p class="comparison-note">Both components reached setup-ready before unmount. In both cases, mounted DOM was removed and <code>onDestroy</code> ran. This is a summary of the controlled observation, not a live result panel.</p>
+        </figure>
+        <div class="copy">
+          <p>A runnable comparison checks whether cleanup is actually called, rather than treating a destruction log as proof that every resource was closed.</p>
+          <h3>Inspect</h3><ul><li>Run the two callback patterns in a browser.</li><li>Read the event order and JSON report.</li><li>Compare the component source and recorded checks.</li></ul>
+          <h3>Evidence limits</h3><p class="limit">A ControlledEventSource mock is used. Real HTTP/SSE traffic, memory retention and unmounting during pending setup were not tested.</p>
+          <div class="actions"><a class="primary" href="https://hxsworrk-lab.github.io/browser-cleanup-check/">Open runnable comparison ↗</a><a href="https://github.com/hxsworrk-lab/browser-cleanup-check">Component source ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="study" id="deck" aria-labelledby="deck-title">
+      <div class="study-head"><span class="number">02</span><div><p class="category">Three-slide presentation · Fictional scenario</p><h2 id="deck-title">The decision, its evidence<br>and its conditions.</h2></div></div>
+      <div class="study-grid">
+        <figure><a href="supplier-decision/slide-1.png" aria-label="View the first supplier decision slide at full size"><img src="supplier-decision/slide-1.png" width="1280" height="720" loading="lazy" alt="First slide of a fictional supplier decision: the lowest quote is not the lowest landed cost."></a><figcaption>Actual rendered preview, slide 1 of 3. All suppliers and figures are fictional.</figcaption></figure>
+        <div class="copy">
+          <p>A short deck explains a supplier comparison, adds the landed costs, then states the threshold at which the recommendation changes.</p>
+          <h3>Inspect</h3><ul><li>Editable text and a native PowerPoint cost table.</li><li>Three individual rendered previews.</li><li>Checked arithmetic and a conditional recommendation.</li></ul>
+          <h3>Evidence limits</h3><p class="limit">The package and authoring-library import were checked. Desktop PowerPoint and arbitrary downstream conversions were not tested. The workflow uses code-based authoring and AI-assisted iteration.</p>
+          <div class="actions"><a class="primary" href="supplier-decision/supplier-decision-study.pptx" download>Download editable PPTX</a><a href="https://github.com/hxsworrk-lab/ui-motion-study/tree/main/supplier-decision">All three slides & notes ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="study" id="geometry" aria-labelledby="geometry-title">
+      <div class="study-head"><span class="number">03</span><div><p class="category">Blender · Editable geometry and GLB</p><h2 id="geometry-title">Openings that exist<br>in the geometry.</h2></div></div>
+      <div class="study-grid">
+        <figure><a href="architectural-openings/model-and-openings.png" aria-label="View the native Blender cutaway at full size"><img src="architectural-openings/model-and-openings.png" width="1500" height="1100" loading="lazy" alt="Native Blender cutaway of a fictional two-room layout with visible door and window openings."></a><figcaption>Actual Blender render. Front and left walls are cut down for this illustration; the source model retains full heights.</figcaption></figure>
+        <div class="copy">
+          <p>An 8.00 × 5.00 m conceptual layout uses separate, named closed wall elements. Door and window clearances can be inspected in the model, not just in its labels.</p>
+          <h3>Inspect</h3><ul><li>Editable Blender scene and full-height GLB export.</li><li>Fourteen recorded opening-geometry checks, all passed.</li><li>Fresh GLB import, dimensions and build source.</li></ul>
+          <h3>Evidence limits</h3><p class="limit">Concept geometry only: no building-code, structural, BIM/MEP or construction approval. Basic export scale was checked; this does not validate every property or target application. Authored with an AI-assisted Python/bpy workflow.</p>
+          <div class="actions"><a class="primary" href="architectural-openings/editable-room-study.glb" download>Download GLB model</a><a href="https://github.com/hxsworrk-lab/ui-motion-study/tree/main/architectural-openings">Blender source & checks ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="motion" id="motion" aria-labelledby="motion-title">
+      <p class="eyebrow">More project outputs</p><h2 id="motion-title">Motion studies</h2>
+      <p>Existing code-authored studies with offline players, export files and source notes. No client campaign results are claimed.</p>
+      <div class="motion-list">
+        <article><h3>Isometric workflow</h3><p>A silent six-second loop: request, validate, record, confirm. MP4 and an editable SVG still.</p><a href="isometric-workflow/index.html">Open motion player →</a></article>
+        <article><h3>Minimal typography</h3><p>Two six-second vertical studies in type, transitions and pacing.</p><a href="minimal-loops-20261017/index.html">Open both studies →</a></article>
+        <article><h3>Quote comparison</h3><p>The original twelve-second supplier comparison. Fictional quotes, MOQ and lead times.</p><a href="index.html">Open original player →</a></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><p>Hx Works / Project studies · October 2026</p><p>These pages document bounded exercises. Sources and methods are linked so the work can be examined; they do not establish suitability for every production system, file format or professional discipline.</p><a href="https://github.com/hxsworrk-lab/ui-motion-study">Repository and full study notes ↗</a></div></footer>
+</body>
+</html>

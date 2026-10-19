@@ -2,6 +2,8 @@
 
 Inspect the output, the source and the checks behind it. These are self-initiated studies, with fictional or synthetic inputs. They are capability examples; none is presented as paid client work.
 
+[View the project studies in a browser](https://hxsworrk-lab.github.io/ui-motion-study/studies.html) — previews, editable files and evidence limits in one page.
+
 ## Technical evidence and editable files
 
 | Study | What you can inspect | Scope of the evidence |
