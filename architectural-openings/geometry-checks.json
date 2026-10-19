@@ -1,0 +1,326 @@
+{
+  "objects": 16,
+  "dimensions": {
+    "Floor slab": [
+      8.0,
+      5.0,
+      0.15
+    ],
+    "West wall": [
+      0.2,
+      4.6,
+      2.8
+    ],
+    "East wall": [
+      0.2,
+      4.6,
+      2.8
+    ],
+    "South wall": [
+      1.55,
+      0.2,
+      2.8
+    ],
+    "South wall.001": [
+      5.55,
+      0.2,
+      2.8
+    ],
+    "Entrance lintel": [
+      0.9,
+      0.2,
+      0.7
+    ],
+    "North wall": [
+      1.2,
+      0.2,
+      2.8
+    ],
+    "North wall.001": [
+      2.8,
+      0.2,
+      2.8
+    ],
+    "North wall.002": [
+      1.2,
+      0.2,
+      2.8
+    ],
+    "Window 1 sill wall": [
+      1.6,
+      0.2,
+      0.9
+    ],
+    "Window 1 lintel": [
+      1.6,
+      0.2,
+      0.7
+    ],
+    "Window 2 sill wall": [
+      1.2,
+      0.2,
+      0.9
+    ],
+    "Window 2 lintel": [
+      1.2,
+      0.2,
+      0.7
+    ],
+    "Partition wall": [
+      0.12,
+      0.95,
+      2.8
+    ],
+    "Partition wall.001": [
+      0.12,
+      2.75,
+      2.8
+    ],
+    "Partition door lintel": [
+      0.12,
+      0.9,
+      0.7
+    ]
+  },
+  "actual_polygon_rays": [
+    {
+      "name": "Entrance lateral -0.44",
+      "origin": [
+        -2.44,
+        -3,
+        1
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "Entrance lateral 0.44",
+      "origin": [
+        -1.56,
+        -3,
+        1
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "Entrance lateral -0.46",
+      "origin": [
+        -2.46,
+        -3,
+        1
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    },
+    {
+      "name": "Entrance lateral 0.46",
+      "origin": [
+        -1.54,
+        -3,
+        1
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    },
+    {
+      "name": "Entrance head 2.09",
+      "origin": [
+        -2,
+        -3,
+        2.09
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "Entrance head 2.11",
+      "origin": [
+        -2,
+        -3,
+        2.11
+      ],
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    },
+    {
+      "name": "Partition clearance -1.34",
+      "origin": [
+        0.5,
+        -1.34,
+        1
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "Partition clearance -0.46",
+      "origin": [
+        0.5,
+        -0.46,
+        1
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "Partition clearance -1.36",
+      "origin": [
+        0.5,
+        -1.36,
+        1
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    },
+    {
+      "name": "Partition clearance -0.44",
+      "origin": [
+        0.5,
+        -0.44,
+        1
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    },
+    {
+      "name": "North window height 0.91",
+      "origin": [
+        -2,
+        3,
+        0.91
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "North window height 2.09",
+      "origin": [
+        -2,
+        3,
+        2.09
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": true,
+      "observed_clear": true,
+      "passed": true
+    },
+    {
+      "name": "North window height 0.89",
+      "origin": [
+        -2,
+        3,
+        0.89
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    },
+    {
+      "name": "North window height 2.11",
+      "origin": [
+        -2,
+        3,
+        2.11
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "distance": 1,
+      "expected_clear": false,
+      "observed_clear": false,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

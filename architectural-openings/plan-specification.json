@@ -1,0 +1,21 @@
+{
+  "classification": "Self-initiated fictional conceptual geometry, not client work or construction documents",
+  "units": "meters",
+  "outer_dimensions": [
+    8,
+    5
+  ],
+  "wall_height": 2.8,
+  "external_wall_thickness": 0.2,
+  "partition_thickness": 0.12,
+  "entrance_clear_width": 0.9,
+  "door_clear_height": 2.1,
+  "window_sill": 0.9,
+  "window_head": 2.1,
+  "assumptions": [
+    "No survey or code-compliance claim.",
+    "Open roof is a presentation choice.",
+    "Wall elements are individually closed editable cuboids; no continuous welded building mesh claimed.",
+    "No BIM/MEP/structural/detailing deliverable."
+  ]
+}

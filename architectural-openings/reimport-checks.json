@@ -1,0 +1,16 @@
+{
+  "imported_meshes": 16,
+  "world_min": [
+    -4.0,
+    -2.5,
+    -0.15000000596046448
+  ],
+  "world_max": [
+    4.0,
+    2.5,
+    2.799999952316284
+  ],
+  "max_expected_bounds_error_m": 4.7683715642676816e-08,
+  "passed": true,
+  "scope": "Fresh Blender GLB import, overall geometry scale only. No BIM/engine/code-compliance claim."
+}
