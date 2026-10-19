@@ -1,0 +1,14 @@
+{
+  "blender": "5.2.1 LTS",
+  "mesh_objects": 29,
+  "vertices": 1660,
+  "triangles": 2212,
+  "materials": 7,
+  "basis": "Original primitives and converted built-in-font serial, no client/third-party asset",
+  "limits": [
+    "Closed stylized prop, not a functional hinged/hollow container",
+    "No UV texture painting, LOD, collider or Unity import/runtime validation",
+    "Separate intersecting component meshes, not printable watertight union",
+    "Not commissioned artwork, not proof of game production or professional years"
+  ]
+}

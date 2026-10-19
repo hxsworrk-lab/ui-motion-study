@@ -4,6 +4,8 @@ Inspect the output, the source and the checks behind it. These are self-initiate
 
 [View the project studies in a browser](https://hxsworrk-lab.github.io/ui-motion-study/studies.html) — previews, editable files and evidence limits in one page.
 
+[Misfiled Archive Box — stylized 3D prop study](archive-box-study/) · actual model render, GLB, source and bounded native import checks; self-initiated, not Unity-production validated.
+
 ## Technical evidence and editable files
 
 | Study | What you can inspect | Scope of the evidence |

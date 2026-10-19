@@ -1,0 +1,27 @@
+{
+  "blender": "5.2.1 LTS",
+  "mesh_objects": 29,
+  "triangles": 2212,
+  "used_materials": [
+    "Eyes - muted amber",
+    "Hardware - aged brass",
+    "Ink enamel",
+    "Paint - faded jade",
+    "Paint - warm bone",
+    "Paper - cream",
+    "Seal - vermilion"
+  ],
+  "bounds_min": [
+    -0.6949999928474426,
+    -0.5824999809265137,
+    0.009999997913837433
+  ],
+  "bounds_max": [
+    0.6949999928474426,
+    0.47699999809265137,
+    1.0829999446868896
+  ],
+  "finite_vertices": true,
+  "no_camera_or_light": true,
+  "limits": "Native GLB parse and bounded structure check only; no Unity, LOD, collision, UV/texture or production approval."
+}
