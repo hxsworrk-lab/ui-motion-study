@@ -1,0 +1,1979 @@
+{
+  "scope": "Selected native n8n CLI execution fields from our synthetic fixture. Stacks, local paths and instance metadata excluded.",
+  "traces": [
+    {
+      "scenario": "normal",
+      "errorMessage": null,
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 14,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:39 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 25,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:39 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 3,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:39 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require valid batch": [
+          {
+            "executionStatus": "success",
+            "executionTime": 8,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:39 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Split records": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "First record per ID": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Write synthetic row": [
+          {
+            "executionStatus": "success",
+            "executionTime": 27,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "rate-limit-once",
+      "errorMessage": null,
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 12,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic rate limit"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:43 GMT",
+                        "content-type": "application/json",
+                        "content-length": "33",
+                        "retry-after": "1"
+                      },
+                      "statusCode": 429,
+                      "statusMessage": "Too Many Requests"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:44 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 21,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic rate limit"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:43 GMT",
+                        "content-type": "application/json",
+                        "content-length": "33",
+                        "retry-after": "1"
+                      },
+                      "statusCode": 429,
+                      "statusMessage": "Too Many Requests"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:44 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Wait one second": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1015,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic rate limit"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:43 GMT",
+                        "content-type": "application/json",
+                        "content-length": "33",
+                        "retry-after": "1"
+                      },
+                      "statusCode": 429,
+                      "statusMessage": "Too Many Requests"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:44 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require valid batch": [
+          {
+            "executionStatus": "success",
+            "executionTime": 7,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:44 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Split records": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "First record per ID": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Write synthetic row": [
+          {
+            "executionStatus": "success",
+            "executionTime": 19,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "unavailable-once",
+      "errorMessage": null,
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 13,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic unavailable"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:48 GMT",
+                        "content-type": "application/json",
+                        "content-length": "34"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:49 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 20,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic unavailable"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:48 GMT",
+                        "content-type": "application/json",
+                        "content-length": "34"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:49 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Wait one second": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1013,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic unavailable"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:48 GMT",
+                        "content-type": "application/json",
+                        "content-length": "34"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:49 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require valid batch": [
+          {
+            "executionStatus": "success",
+            "executionTime": 8,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:49 GMT",
+                        "content-type": "application/json",
+                        "content-length": "80"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Split records": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "First record per ID": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Write synthetic row": [
+          {
+            "executionStatus": "success",
+            "executionTime": 20,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "permanent400",
+      "errorMessage": "Synthetic source HTTP 400",
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 13,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic permanent input error"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:53 GMT",
+                        "content-type": "application/json",
+                        "content-length": "44"
+                      },
+                      "statusCode": 400,
+                      "statusMessage": "Bad Request"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 21,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic permanent input error"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:53 GMT",
+                        "content-type": "application/json",
+                        "content-length": "44"
+                      },
+                      "statusCode": 400,
+                      "statusMessage": "Bad Request"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 3,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic permanent input error"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:53 GMT",
+                        "content-type": "application/json",
+                        "content-length": "44"
+                      },
+                      "statusCode": 400,
+                      "statusMessage": "Bad Request"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Stop HTTP failure": [
+          {
+            "executionStatus": "error",
+            "executionTime": 13,
+            "data": null,
+            "errorMessage": "Synthetic source HTTP 400"
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "always503",
+      "errorMessage": "Synthetic source HTTP 503",
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 12,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:57 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 3,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:58 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 3,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:59 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 21,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:57 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:58 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:59 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Wait one second": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1007,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:57 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          },
+          {
+            "executionStatus": "success",
+            "executionTime": 1004,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:58 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "error": "synthetic persistent failure"
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:50:59 GMT",
+                        "content-type": "application/json",
+                        "content-length": "41"
+                      },
+                      "statusCode": 503,
+                      "statusMessage": "Service Unavailable"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Stop HTTP failure": [
+          {
+            "executionStatus": "error",
+            "executionTime": 13,
+            "data": null,
+            "errorMessage": "Synthetic source HTTP 503"
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "duplicate",
+      "errorMessage": null,
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 12,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-a",
+                            "quantity": 999
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:03 GMT",
+                        "content-type": "application/json",
+                        "content-length": "115"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 20,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-a",
+                            "quantity": 999
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:03 GMT",
+                        "content-type": "application/json",
+                        "content-length": "115"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-a",
+                            "quantity": 999
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:03 GMT",
+                        "content-type": "application/json",
+                        "content-length": "115"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require valid batch": [
+          {
+            "executionStatus": "success",
+            "executionTime": 9,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "id": "item-a",
+                            "quantity": 999
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:03 GMT",
+                        "content-type": "application/json",
+                        "content-length": "115"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Split records": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 999
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "First record per ID": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "item-a",
+                      "quantity": 10
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": "item-b",
+                      "quantity": 5
+                    },
+                    "pairedItem": {
+                      "item": 2
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Write synthetic row": [
+          {
+            "executionStatus": "success",
+            "executionTime": 21,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "accepted": true,
+                      "replaced": false
+                    },
+                    "pairedItem": {
+                      "item": 1
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "missing-id",
+      "errorMessage": "Synthetic source contains invalid records",
+      "runData": {
+        "Start": [
+          {
+            "executionStatus": "success",
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Read synthetic API": [
+          {
+            "executionStatus": "success",
+            "executionTime": 14,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "quantity": 2
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:07 GMT",
+                        "content-type": "application/json",
+                        "content-length": "97"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Retry transient status": [
+          {
+            "executionStatus": "success",
+            "executionTime": 21,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "quantity": 2
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:07 GMT",
+                        "content-type": "application/json",
+                        "content-length": "97"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require success": [
+          {
+            "executionStatus": "success",
+            "executionTime": 4,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "quantity": 2
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:07 GMT",
+                        "content-type": "application/json",
+                        "content-length": "97"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ],
+                []
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Require valid batch": [
+          {
+            "executionStatus": "success",
+            "executionTime": 7,
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "body": {
+                        "records": [
+                          {
+                            "id": "item-a",
+                            "quantity": 10
+                          },
+                          {
+                            "quantity": 2
+                          },
+                          {
+                            "id": "item-b",
+                            "quantity": 5
+                          }
+                        ]
+                      },
+                      "headers": {
+                        "server": "BaseHTTP/0.6 Python/3.12.14",
+                        "date": "Mon, 19 Oct 2026 07:51:07 GMT",
+                        "content-type": "application/json",
+                        "content-length": "97"
+                      },
+                      "statusCode": 200,
+                      "statusMessage": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "errorMessage": null
+          }
+        ],
+        "Stop invalid batch": [
+          {
+            "executionStatus": "error",
+            "executionTime": 11,
+            "data": null,
+            "errorMessage": "Synthetic source contains invalid records"
+          }
+        ]
+      }
+    }
+  ]
+}

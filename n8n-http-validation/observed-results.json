@@ -1,0 +1,263 @@
+{
+  "n8n_version": "2.43.7",
+  "scope": "own-loopback-fixture-not-google-sheets",
+  "results": [
+    {
+      "scenario": "normal",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 0,
+      "source_calls": 1,
+      "rows": {
+        "item-a": {
+          "id": "item-a",
+          "quantity": 10
+        },
+        "item-b": {
+          "id": "item-b",
+          "quantity": 5
+        }
+      },
+      "write_events": [
+        {
+          "id": "item-a",
+          "quantity": 10,
+          "replaced": false
+        },
+        {
+          "id": "item-b",
+          "quantity": 5,
+          "replaced": false
+        }
+      ],
+      "native_error": null,
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Require success",
+        "Require valid batch",
+        "Split records",
+        "First record per ID",
+        "Write synthetic row"
+      ]
+    },
+    {
+      "scenario": "rate-limit-once",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 0,
+      "source_calls": 2,
+      "rows": {
+        "item-a": {
+          "id": "item-a",
+          "quantity": 10
+        },
+        "item-b": {
+          "id": "item-b",
+          "quantity": 5
+        }
+      },
+      "write_events": [
+        {
+          "id": "item-a",
+          "quantity": 10,
+          "replaced": false
+        },
+        {
+          "id": "item-b",
+          "quantity": 5,
+          "replaced": false
+        }
+      ],
+      "native_error": null,
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Wait one second",
+        "Require success",
+        "Require valid batch",
+        "Split records",
+        "First record per ID",
+        "Write synthetic row"
+      ]
+    },
+    {
+      "scenario": "unavailable-once",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 0,
+      "source_calls": 2,
+      "rows": {
+        "item-a": {
+          "id": "item-a",
+          "quantity": 10
+        },
+        "item-b": {
+          "id": "item-b",
+          "quantity": 5
+        }
+      },
+      "write_events": [
+        {
+          "id": "item-a",
+          "quantity": 10,
+          "replaced": false
+        },
+        {
+          "id": "item-b",
+          "quantity": 5,
+          "replaced": false
+        }
+      ],
+      "native_error": null,
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Wait one second",
+        "Require success",
+        "Require valid batch",
+        "Split records",
+        "First record per ID",
+        "Write synthetic row"
+      ]
+    },
+    {
+      "scenario": "permanent400",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 1,
+      "source_calls": 1,
+      "rows": {},
+      "write_events": [],
+      "native_error": "Synthetic source HTTP 400",
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Require success",
+        "Stop HTTP failure"
+      ]
+    },
+    {
+      "scenario": "always503",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 1,
+      "source_calls": 3,
+      "rows": {},
+      "write_events": [],
+      "native_error": "Synthetic source HTTP 503",
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Wait one second",
+        "Require success",
+        "Stop HTTP failure"
+      ]
+    },
+    {
+      "scenario": "duplicate",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 0,
+      "source_calls": 1,
+      "rows": {
+        "item-a": {
+          "id": "item-a",
+          "quantity": 10
+        },
+        "item-b": {
+          "id": "item-b",
+          "quantity": 5
+        }
+      },
+      "write_events": [
+        {
+          "id": "item-a",
+          "quantity": 10,
+          "replaced": false
+        },
+        {
+          "id": "item-b",
+          "quantity": 5,
+          "replaced": false
+        }
+      ],
+      "native_error": null,
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Require success",
+        "Require valid batch",
+        "Split records",
+        "First record per ID",
+        "Write synthetic row"
+      ]
+    },
+    {
+      "scenario": "missing-id",
+      "checks": {
+        "native_run_data": true,
+        "error_matches": true,
+        "source_calls_match": true,
+        "rows_match": true,
+        "row_write_count_matches": true
+      },
+      "passed": true,
+      "cli_returncode": 1,
+      "source_calls": 1,
+      "rows": {},
+      "write_events": [],
+      "native_error": "Synthetic source contains invalid records",
+      "executed_nodes": [
+        "Start",
+        "Read synthetic API",
+        "Retry transient status",
+        "Require success",
+        "Require valid batch",
+        "Stop invalid batch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+.local/
+state/
+tmp/
+npm-cache/
+browser-cache/
+__pycache__/
+*.tgz
+*.stdout.txt
+*.stderr.txt
