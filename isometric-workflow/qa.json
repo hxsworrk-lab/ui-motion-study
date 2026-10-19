@@ -1,0 +1,55 @@
+{
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "frames": 180,
+  "duration_seconds": 6,
+  "synthetic": true,
+  "loop_exact_endpoint_bbox": null,
+  "last_first_mean_absolute_channels": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "claim_limits": [
+    "Own illustrative workflow only",
+    "No After Effects or Cinema4D project",
+    "No client work or financial system claims",
+    "No full explainer, voiceover, sound or narrative capability proved"
+  ],
+  "sha256": {
+    "contact-sheet.jpg": "cb2052bccfce7a3f7ade76d15408db1305b75ab5775cd6d295191984e5b612fd",
+    "poster.png": "3a9e52c3cc6e1b887354942c54fa8cd4dd8bf83c5e9548c4b758a7ee4fb59a24",
+    "poster.svg": "0b6afd69e2165c03af5861c81f2c992461a084952573a2ed7229f33d4e182c26",
+    "render.py": "9422077e858e4e89811d8c28b03bf33c5b34d65eccd87b60b13a7cf1fa3112f4",
+    "stage-1.png": "862eefd68146ad13cc183593de66faaad9853dd7e2d0822c0521603e48bb470c",
+    "stage-2.png": "5816aa1200c7def1a7e4904f2310166834b4d67b956b7a3563b3a2ef1b7f2b46",
+    "stage-3.png": "df2f3599b7722508039406f688d331922204f934ed2681ed8f36fa73eaa6d9d1",
+    "stage-4.png": "972dac3250973523f5875361c12773a0905464482864601832e93a75fced2c66",
+    "workflow-loop.mp4": "714a4ad3b6579a754e57bf5e33ec8ef61cbf84949becb8461ae4b090800027e5"
+  },
+  "svg_xml_parse": "passed; live text and separate paths/polygons present",
+  "ffmpeg_full_decode": {
+    "exit_code": 0,
+    "frames": 180,
+    "duration_seconds": 6,
+    "codec": "H264/yuv420p",
+    "audio_streams": 0
+  },
+  "native_browser_playback": {
+    "paused": false,
+    "observed_current_time": 0.099544,
+    "previous_paused_time": 1.804645,
+    "duration": 6,
+    "videoWidth": 1280,
+    "videoHeight": 720,
+    "readyState": 4,
+    "error": null,
+    "proof": "preparation/qa/isometric-workflow-playback-20261019.jpg"
+  },
+  "different_stage_mean_abs_channels": [
+    0.8578472222222222,
+    0.473984375,
+    0.53609375
+  ]
+}
