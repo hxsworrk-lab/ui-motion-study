@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hx Works — Creative format lab</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f1e9;color:#223c38;font:16px/1.5 system-ui,sans-serif}main{max-width:1080px;margin:48px auto;padding:0 24px}h1{font-size:36px;line-height:1.1;letter-spacing:-1px;margin:12px 0}p{max-width:760px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase}.controls{display:flex;gap:20px;flex-wrap:wrap;margin:28px 0}label{display:grid;gap:6px;font-size:14px}select,input,button{font:inherit;padding:10px;border:1px solid #70857c;border-radius:6px;background:#fff;color:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #d4542b;outline-offset:3px}.stage{background:#e4e4dc;padding:32px;overflow:auto;min-height:320px;border-radius:12px}.banner{position:relative;display:flex;align-items:center;gap:16px;padding:24px;background:#fdfbf4;isolation:isolate;overflow:hidden;border:1px solid #bac5b4}.copy{min-width:0;flex:1}.brand{font-size:10px;letter-spacing:2px}.headline{font-size:29px;line-height:1.12;font-weight:650;margin:12px 0}.detail{font-size:12px;margin:0 0 18px}.cta{font-size:12px;white-space:nowrap;background:#264d43;color:#fff;border:0;padding:11px 16px}.art{width:110px;flex:none;transform:rotate(-9deg);animation:arrive .6s ease-out both}.banner[data-format="rectangle"]{align-items:flex-start}.banner[data-format="rectangle"] .art{position:absolute;right:18px;bottom:22px;width:90px;z-index:-1}.banner[data-format="rectangle"] .copy{max-width:210px}.banner[data-format="rectangle"] .detail{max-width:155px}.banner[data-format="rectangle"] .cta{margin-top:12px}.banner[data-format="leaderboard"] .copy{display:grid;grid-template-columns:1fr auto;column-gap:16px;align-items:center}.banner[data-format="leaderboard"] .brand{grid-column:1}.banner[data-format="leaderboard"] .headline{font-size:22px;margin:3px 0}.banner[data-format="leaderboard"] .detail{display:none}.banner[data-format="leaderboard"] .cta{grid-row:1/3;grid-column:2}.banner[data-format="leaderboard"] .art{width:65px}.banner[data-format="mobile"]{padding:8px 10px;gap:8px}.banner[data-format="mobile"] .art{display:none}.banner[data-format="mobile"] .copy{display:flex;align-items:center;justify-content:space-between;gap:10px}.banner[data-format="mobile"] .brand,.banner[data-format="mobile"] .detail{display:none}.banner[data-format="mobile"] .headline{font-size:13px;line-height:1.15;margin:0}.banner[data-format="mobile"] .cta{font-size:10px;padding:8px}.banner[hidden]{display:none}.report{padding:14px 0;display:block;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap}.warning{color:#9f351b;min-height:24px}.note{font-size:13px;color:#52645c}dialog{max-width:420px;padding:32px;border:1px solid #70857c;border-radius:12px}dialog::backdrop{background:#172f2880}@keyframes arrive{from{opacity:0;transform:translateY(12px) rotate(-9deg)}to{opacity:1;transform:translateY(0) rotate(-9deg)}}@media(prefers-reduced-motion:reduce){.art{animation:none}}@media(max-width:600px){main{margin:24px auto;padding:0 16px}.stage{padding:16px}h1{font-size:28px}}
+</style>
+<main>
+ <div class="eyebrow">Hx Works / Self-initiated engineering study</div>
+ <h1>One creative. Three formats.</h1>
+ <p>A fictional notebook campaign demonstrates copy-driven layout adaptation. This is a local interactive prototype, not a client campaign, ad-network-certified asset or performance result.</p>
+ <div class="controls">
+  <label>Format<select id="format"><option value="rectangle">300 × 250 — Rectangle</option><option value="leaderboard">728 × 90 — Leaderboard</option><option value="mobile">320 × 50 — Mobile</option></select></label>
+  <label>Language<select id="language"><option value="en">English</option><option value="zh">中文</option></select></label>
+  <label>Copy condition<select id="condition"><option value="normal">Approved short copy</option><option value="stress">Overlong copy — rejection check</option></select></label>
+  <button id="replay" type="button">Replay artwork entrance</button>
+ </div>
+ <div class="stage"><section class="banner" id="banner" data-format="rectangle" aria-label="Fictional notebook creative">
+  <div class="copy"><div class="brand">FIELD NOTES / FICTIONAL</div><h2 class="headline" id="headline"></h2><p class="detail" id="detail"></p><button class="cta" id="cta" type="button"></button></div>
+  <svg class="art" id="art" viewBox="0 0 120 155" aria-hidden="true"><rect x="6" y="5" width="106" height="145" rx="5" fill="#b84c30"/><path d="M19 5V150" stroke="#752d20" stroke-width="2"/><rect x="32" y="35" width="64" height="52" rx="2" fill="#eee6ca"/><path d="M42 50H86M42 59H76M42 68H81" stroke="#7e7863" stroke-width="2"/><path d="M104 5V150" stroke="#e7d8b2" stroke-width="5"/></svg>
+ </section></div>
+ <p id="warning" class="warning" role="status"></p>
+ <output id="report" class="report" aria-live="polite"></output>
+ <p class="note">No external libraries, remote fonts, analytics or application data requests. The CTA opens a fictional local detail dialog. Overset copy is rejected rather than silently clipped. Reduced-motion follows the browser preference.</p>
+ <dialog id="dialog"><h2>Preview only</h2><p>This fictional product has no checkout, price, inventory or external destination.</p><button id="close" type="button">Close preview</button></dialog>
+</main>
+<script>
+'use strict';
+const dimensions={rectangle:[300,250],leaderboard:[728,90],mobile:[320,50]};
+const copies={en:{title:'Make room for ideas.',detail:'A little space for your next big thought.',cta:'Explore notes'},zh:{title:'给灵感留一点空间。',detail:'把下一次好想法，先记在这里。',cta:'看看笔记本'}};
+const els=Object.fromEntries(['format','language','condition','banner','headline','detail','cta','art','report','warning','replay','dialog','close'].map(id=>[id,document.getElementById(id)]));
+let version=0,actions=0,lastAction='initial render';
+function report(ok,why=''){
+ const [w,h]=dimensions[els.format.value];
+ els.report.textContent=JSON.stringify({version,format:els.format.value,width:w,height:h,language:els.language.value,copy:els.condition.value,accepted:ok,reason:why,localPreviewActions:actions,lastAction,reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches},null,2);
+}
+function render(){
+ version++;const [w,h]=dimensions[els.format.value],copy=copies[els.language.value];
+ els.banner.hidden=false;els.banner.dataset.format=els.format.value;els.banner.style.width=w+'px';els.banner.style.height=h+'px';els.banner.lang=els.language.value;
+ els.headline.textContent=els.condition.value==='stress'?'An intentionally overlong headline that cannot safely fit every compact advertising format without editorial revision or a different creative treatment.':copy.title;
+ els.detail.textContent=copy.detail;els.cta.textContent=copy.cta;
+ requestAnimationFrame(()=>{
+  const box=els.banner.getBoundingClientRect(), nodes=[els.headline,els.cta];
+  const overset=nodes.some(n=>{const r=n.getBoundingClientRect();return r.left<box.left||r.right>box.right||r.top<box.top||r.bottom>box.bottom||n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1});
+  const ok=!overset;
+  els.banner.hidden=!ok;els.warning.textContent=ok?'':'Copy rejected: shorten the headline before exporting this format.';
+  report(ok,ok?'':'content-exceeds-format-bounds');
+ });
+}
+for(const id of ['format','language','condition'])els[id].addEventListener('change',()=>{lastAction='change '+id;render()});
+els.replay.addEventListener('click',()=>{lastAction='replay artwork entrance';els.art.getAnimations().forEach(a=>a.cancel());if(!matchMedia('(prefers-reduced-motion: reduce)').matches)els.art.animate([{opacity:0,transform:'translateY(12px) rotate(-9deg)'},{opacity:1,transform:'translateY(0) rotate(-9deg)'}],{duration:600,easing:'ease-out'});report(!els.banner.hidden)});
+els.cta.addEventListener('click',()=>{actions++;lastAction='open local product preview';els.dialog.showModal();report(true)});
+els.close.addEventListener('click',()=>els.dialog.close());els.dialog.addEventListener('close',()=>{lastAction='close local product preview';els.cta.focus();report(true)});
+render();
+</script>
+</html>
