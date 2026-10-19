@@ -10,6 +10,7 @@ Inspect the output, the source and the checks behind it. These are self-initiate
 
 | Study | What you can inspect | Scope of the evidence |
 | --- | --- | --- |
+| [WordPress REST validation](wordpress-rest-study/) | PHP handler, synthetic fixture and unchanged recorded JSON. | Seven in-process authorization, validation and sanitized-save checks; HTTP/session authentication, process-exit persistence and production integrations remain untested. |
 | [Browser cleanup comparison](https://hxsworrk-lab.github.io/browser-cleanup-check/) · [source](https://github.com/hxsworrk-lab/browser-cleanup-check) | A runnable Svelte 5.23.2 comparison, ordered events and a JSON report. | Component mount/unmount and mock cleanup calls in a controlled setup. Real HTTP/SSE traffic, memory retention and production acceptance remain untested. |
 | [Creative format lab](creative-format-lab/) | Dependency-free JavaScript source, three advertising sizes, English/Chinese copy and a local preview dialog. | Six layout combinations, three measured overflow rejections and native keyboard interaction checked. Reduced-motion runtime, animation smoothness and ad-network certification remain untested. |
 | [Native n8n HTTP workflow checks](n8n-http-validation/) | Workflow generator, synthetic HTTP fixtures and recorded execution checks. | Seven controlled scenarios cover transient failures, retry bounds, batch validation and within-batch deduplication. Real Google Sheets, OAuth and production reliability remain untested. |

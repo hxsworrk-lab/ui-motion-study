@@ -1,0 +1,231 @@
+{
+    "kind": "self_initiated_synthetic_wordpress_internal_rest_integration",
+    "observed_at_utc": "2026-10-16T15:18:55+00:00",
+    "wordpress_version": "7.1.3",
+    "php_version": "8.3.33",
+    "php_sapi": "cli",
+    "core_version_file_sha256": "7513dacf90ade66347561ffc2e79d27e74b6a3f05d869bd455144ed7cd378a04",
+    "core_functions": {
+        "rest_do_request": {
+            "file": "/wordpress/wp-includes/rest-api.php",
+            "start_line": 613
+        },
+        "wp_verify_nonce": {
+            "file": "/wordpress/wp-includes/pluggable.php",
+            "start_line": 2474
+        },
+        "current_user_can": {
+            "file": "/wordpress/wp-includes/capabilities.php",
+            "start_line": 913
+        },
+        "get_option": {
+            "file": "/wordpress/wp-includes/option.php",
+            "start_line": 78
+        },
+        "sanitize_text_field": {
+            "file": "/wordpress/wp-includes/formatting.php",
+            "start_line": 5656
+        }
+    },
+    "rest_server_class": "WP_REST_Server",
+    "database_class": "WP_SQLite_DB",
+    "case_count": 7,
+    "all_passed": true,
+    "observations": [
+        {
+            "case": "guest_valid_nonce_denied",
+            "actor_roles": [],
+            "edit_posts_capability": false,
+            "nonce_mode": "valid",
+            "status": 403,
+            "response": {
+                "code": "hx_forbidden",
+                "message": "edit_posts capability required.",
+                "data": {
+                    "status": 403
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "invalid_request_left_submission_unchanged": true,
+            "valid_payload_persisted_as_expected": null,
+            "passed": true
+        },
+        {
+            "case": "subscriber_valid_nonce_denied",
+            "actor_roles": [
+                "subscriber"
+            ],
+            "edit_posts_capability": false,
+            "nonce_mode": "valid",
+            "status": 403,
+            "response": {
+                "code": "hx_forbidden",
+                "message": "edit_posts capability required.",
+                "data": {
+                    "status": 403
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "invalid_request_left_submission_unchanged": true,
+            "valid_payload_persisted_as_expected": null,
+            "passed": true
+        },
+        {
+            "case": "editor_bad_nonce_denied",
+            "actor_roles": [
+                "editor"
+            ],
+            "edit_posts_capability": true,
+            "nonce_mode": "bad",
+            "status": 403,
+            "response": {
+                "code": "hx_bad_nonce",
+                "message": "Valid action nonce required.",
+                "data": {
+                    "status": 403
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "invalid_request_left_submission_unchanged": true,
+            "valid_payload_persisted_as_expected": null,
+            "passed": true
+        },
+        {
+            "case": "editor_missing_nonce_denied",
+            "actor_roles": [
+                "editor"
+            ],
+            "edit_posts_capability": true,
+            "nonce_mode": "missing",
+            "status": 403,
+            "response": {
+                "code": "hx_bad_nonce",
+                "message": "Valid action nonce required.",
+                "data": {
+                    "status": 403
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "invalid_request_left_submission_unchanged": true,
+            "valid_payload_persisted_as_expected": null,
+            "passed": true
+        },
+        {
+            "case": "editor_missing_title_rejected",
+            "actor_roles": [
+                "editor"
+            ],
+            "edit_posts_capability": true,
+            "nonce_mode": "valid",
+            "status": 400,
+            "response": {
+                "code": "hx_bad_title",
+                "message": "Non-empty title required.",
+                "data": {
+                    "status": 400
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "invalid_request_left_submission_unchanged": true,
+            "valid_payload_persisted_as_expected": null,
+            "passed": true
+        },
+        {
+            "case": "editor_invalid_email_rejected",
+            "actor_roles": [
+                "editor"
+            ],
+            "edit_posts_capability": true,
+            "nonce_mode": "valid",
+            "status": 400,
+            "response": {
+                "code": "hx_bad_email",
+                "message": "Valid email required.",
+                "data": {
+                    "status": 400
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "invalid_request_left_submission_unchanged": true,
+            "valid_payload_persisted_as_expected": null,
+            "passed": true
+        },
+        {
+            "case": "editor_valid_sanitized_payload_saved",
+            "actor_roles": [
+                "editor"
+            ],
+            "edit_posts_capability": true,
+            "nonce_mode": "valid",
+            "status": 201,
+            "response": {
+                "saved": true,
+                "record": {
+                    "title": "Synthetic form entry",
+                    "email": "sample@example.test"
+                }
+            },
+            "state_before": {
+                "title": "Synthetic baseline",
+                "email": "baseline@example.test"
+            },
+            "state_after": {
+                "title": "Synthetic form entry",
+                "email": "sample@example.test"
+            },
+            "invalid_request_left_submission_unchanged": null,
+            "valid_payload_persisted_as_expected": true,
+            "passed": true
+        }
+    ],
+    "elapsed_seconds": 0.422,
+    "limitations": [
+        "Internal rest_do_request calls; not HTTP/browser/cookie authentication or network CSRF validation.",
+        "Synthetic WP users use wp_set_current_user; not login/session tests or a real owner account.",
+        "No database persistence across Playground process exit or production database compatibility tested.",
+        "No client site, third-party form plugin, SMTP delivery, payment or purchased work tested.",
+        "No-write observations concern this one submission option, not every WordPress internal table or cache."
+    ]
+}
