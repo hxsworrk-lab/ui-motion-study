@@ -6,9 +6,9 @@ A self-initiated, code-authored illustration of a fictional network switch. This
 
 <img src="data-centre-switch-128.png" width="128" height="128" alt="Fictional network switch at its native 128-pixel size">
 
-## Enlarged view
+## Enlarged SVG view
 
-<img src="data-centre-switch-128.png" width="384" height="384" style="image-rendering:pixelated" alt="Enlarged view of the same network-switch sprite">
+<img src="data-centre-switch-128.svg" width="384" height="384" alt="Enlarged SVG view of the same network-switch geometry">
 
 ## Files and checks
 
