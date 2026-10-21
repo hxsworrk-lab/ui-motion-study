@@ -22,6 +22,6 @@ The sequence introduces the decision, shows the cost build-up, then states the p
 
 ## Scope and workflow
 
-The deck uses code-based authoring and AI-assisted writing/design iteration. Checks covered the three-slide package, editable table, arithmetic, import by the authoring library and individual rendered previews. Desktop PowerPoint and arbitrary downstream conversions have not been tested for this deck.
+The deck uses code-based authoring and AI-assisted writing/design iteration. Checks covered the three-slide package, editable table, arithmetic, import by the authoring library and individual rendered previews. On 21 October 2026, the unchanged PPTX was opened read-only in desktop Microsoft PowerPoint. Its native shapes and table were recognized, and all three slides were exported through PowerPoint at 1600 x 900 and visually checked. Native edit-save-reopen, animations, other Office applications and arbitrary downstream conversions have not been tested.
 
 There are no customer assets, real supplier claims, measured business outcomes or confidential inputs. The visual direction belongs to this exercise and is not a universal style preset. It does not demonstrate a complete fundraising strategy or an actual enterprise QBR/EBR engagement.
