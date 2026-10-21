@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A self-initiated, interactive Three.js study: four original isometric workflow steps, native 3D geometry and accessible controls.">
+  <title>From request to record — Hx Works motion study</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-ready="loading">
+  <main>
+    <header class="masthead"><span>HX WORKS / INTERACTIVE STUDY</span><span class="study-tag">SELF-INITIATED · 2026</span></header>
+    <section class="intro" aria-labelledby="title">
+      <div><p class="eyebrow">ONE ROUTE. FOUR CLEAR STEPS.</p><h1 id="title">From request<br>to record.</h1></div>
+      <p class="intro-note">An original isometric sequence, rebuilt as live 3D.<br>Select a step. Follow the packet. Scroll for a small change in perspective.</p>
+    </section>
+
+    <section class="workbench" aria-labelledby="scene-heading">
+      <div class="scene-topline"><h2 id="scene-heading">Explore the workflow</h2><span id="renderer-state" role="status">Loading local 3D module…</span></div>
+      <div id="scene" class="scene">
+        <canvas id="world" tabindex="0" aria-label="Interactive 3D workflow. Use number keys 1 to 4, or left and right arrows, to select a node. The four buttons below provide the same controls." aria-describedby="scene-help"></canvas>
+        <img id="fallback" class="fallback" src="assets/original-poster.svg" alt="Original vector still: request, validate, record and confirm arranged around a loop." hidden>
+        <div id="labels" class="labels" aria-hidden="true"></div>
+        <div class="scene-caption"><span id="geometry-state">ORIGINAL GEOMETRY / LIVE WEBGL</span><span id="scroll-state">Scroll angle: 0%</span></div>
+      </div>
+      <p id="scene-help" class="scene-help">Click a 3D node or choose a step below. Keyboard: Tab, Enter, arrow keys, or 1–4 while the scene is focused. Page scrolling stays native.</p>
+      <div class="step-controls" role="group" aria-label="Workflow step">
+        <button type="button" data-step="0" aria-pressed="true"><span class="step-number">01</span><span>Request</span></button>
+        <button type="button" data-step="1" aria-pressed="false"><span class="step-number">02</span><span>Validate</span></button>
+        <button type="button" data-step="2" aria-pressed="false"><span class="step-number">03</span><span>Record</span></button>
+        <button type="button" data-step="3" aria-pressed="false"><span class="step-number">04</span><span>Confirm</span></button>
+      </div>
+      <div class="inspection">
+        <div class="step-copy" aria-live="polite" aria-atomic="true"><p class="eyebrow" id="selected-number">SELECTED / 01</p><h3 id="selected-name">Request</h3><p id="selected-description">A document marks the beginning of the illustrative route.</p></div>
+        <div class="playback"><button id="play-toggle" class="play-button" type="button" aria-pressed="true" disabled>Pause packet</button><p id="motion-state">Preparing motion controls…</p><p id="packet-state">Packet route: Request → Validate</p></div>
+      </div>
+    </section>
+
+    <section class="notes" aria-label="Study notes and observed measurements">
+      <div><p class="eyebrow">SMALL, INSPECTABLE INTERACTION</p><h2>A moving point.<br>A readable route.</h2><p>The four platforms, paper, shield and stacked records are native 3D meshes. Selection changes the highlighted platform. The packet follows a six-second loop. Scroll adds a bounded camera turn; reduced motion keeps the view still.</p></div>
+      <div class="measurement"><p class="eyebrow">THIS VISIT / OBSERVED VALUES</p><dl><dt>First WebGL draw</dt><dd id="first-draw">Not measured yet</dd><dt>Animation frame intervals</dt><dd id="frame-samples">Waiting for visible animation frames</dd><dt>Current scene</dt><dd id="scene-counts">Not available yet</dd></dl><p class="measurement-note">First draw measures navigation start to the first render call returning, not screen paint. Frame intervals sample requestAnimationFrame while the packet runs; they are not GPU frame times or a 60fps guarantee. Results depend on the device, viewport and browser.</p></div>
+    </section>
+    <footer><p>Self-initiated capability study by Hx Works. Original geometry and code, with automated assistance. No client commission, implemented financial system, client results or production performance claim.</p><p>Three.js 0.180.0 · <a href="vendor/LICENSE-three.txt">MIT license</a> · <a href="README.md">Source notes</a>. No trackers, remote fonts or external runtime requests.</p></footer>
+  </main>
+  <noscript><p class="no-script">JavaScript is disabled. The original vector still and step descriptions remain available. <a href="assets/original-poster.svg">Open the still</a>.</p></noscript>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
