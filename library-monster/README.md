@@ -2,7 +2,7 @@
 
 **Hx Works · Self-initiated style study · Fictional character**
 
-![A small purple creature holding a closed yellow book](book-creature-study.png)
+<img src="book-creature-study.png" alt="A small purple creature holding a closed yellow book" width="320">
 
 One curious creature, a clear silhouette and a simple book prop. This study explores a friendly character direction for small illustrated cards. It is an independent capability example, with no affiliation with a library, publisher or client.
 
