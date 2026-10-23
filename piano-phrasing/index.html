@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evening Margin — piano phrasing study · Hx Works</title>
+<style>body{margin:0;background:#f7f5ee;color:#242b29;font:17px/1.6 system-ui,sans-serif}main{max-width:760px;margin:64px auto;padding:0 24px 48px}h1{font:400 clamp(32px,6vw,48px)/1.15 Georgia,serif}h2{font-size:19px;margin-top:28px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase}audio{display:block;width:100%;margin:20px 0}button,a{font:inherit}button{padding:8px 14px;margin:4px 8px 4px 0;border:1px solid #737e77;border-radius:5px;background:transparent;color:inherit;cursor:pointer}a{color:#285c4c}small{display:block;color:#505d56}hr{border:0;border-top:1px solid #ccd1c8;margin:28px 0}</style>
+<main>
+<p class="eyebrow">Hx Works · self-initiated study</p>
+<h1>Evening Margin</h1>
+<p>An eight-bar piano motif in two arrangements. The melody keeps the same 28 pitches in the same order; the second version changes the accompaniment, dynamics, note lengths, pedal and tempo.</p>
+<audio id="player" controls preload="metadata" src="comparison.mp3" aria-label="Piano arrangement comparison"></audio>
+<button id="play" type="button">Play comparison</button>
+<button id="phrased" type="button">Jump to phrased version</button>
+<p id="status" role="status">Not playing</p>
+<h2>Listening guide</h2>
+<p><strong>0:00 — Straight.</strong> Fixed tempo and dynamics, with block-chord accompaniment.<br><strong>0:19.34 — Phrased.</strong> Quieter bass-and-chord responses, a melodic dynamic arc, short phrase breaths and a slower closing cadence. The preceding one-second gap separates the renders.</p>
+<h2>Editable source</h2>
+<p><a href="straight.mid">Straight MIDI</a> · <a href="phrased.mid">Phrased MIDI</a> · <a href="README.md">Method and credits</a></p>
+<hr>
+<small>This is code-authored, AI-assisted MIDI composition and programming, rendered with a sampled piano. It is not a recording of a pianist, a client commission, or a demonstration of revising somebody else’s song. No customer audio or MIDI was used.</small>
+<small>Sound: GeneralUser GS 2.0.3 by S. Christian Collins, rendered with FluidSynth 2.6.1. The SoundFont is not redistributed here. Project scope, source permissions, deliverables and rights for commissioned work require separate agreement.</small>
+</main>
+<script>
+const p=document.getElementById('player'),s=document.getElementById('status');
+const clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+const show=()=>{s.textContent=`${p.paused?'Paused':'Playing'} · ${clock(p.currentTime)} / ${Number.isFinite(p.duration)?clock(p.duration):'loading'}`};
+document.getElementById('play').onclick=()=>{p.play().catch(()=>{s.textContent='Use the audio player to begin playback.'})};
+document.getElementById('phrased').onclick=()=>{p.currentTime=19.3437641723356;p.play().catch(()=>{s.textContent='Phrased version selected. Press play in the audio player.'})};
+for(const event of ['timeupdate','play','pause','loadedmetadata','ended'])p.addEventListener(event,show);
+</script>
+</html>
