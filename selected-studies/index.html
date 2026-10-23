@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Hx Works: working demos, engineering checks and editable design studies, with evidence and scope notes.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Selected studies — Hx Works</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#studies">Skip to the studies</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Hx Works home">Hx <span>Works</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#studies">Selected studies</a>
+      <a href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main class="catalog" id="top">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow">ENGINEERING · INTERACTION · EDITABLE DESIGN</p>
+        <h1 id="intro-title">Work you can inspect.</h1>
+        <p class="intro-copy">Explore working demos and design studies, with their evidence and test boundaries. All examples are self-initiated.</p>
+      </div>
+      <aside class="intro-aside" aria-label="Working arrangement">
+        <p>Hx Works</p>
+        <span>China · UTC+8</span>
+        <span>Asynchronous written collaboration</span>
+        <a href="mailto:hxsgmail@gmail.com">hxsgmail@gmail.com</a>
+      </aside>
+    </section>
+
+    <section id="studies" aria-labelledby="study-heading">
+      <div class="catalog-heading">
+        <div><p class="eyebrow">SELECTED WORK</p><h2 id="study-heading">Start with the relevant result.</h2></div>
+        <p id="result-count" role="status" aria-live="polite">6 studies</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter studies">
+        <button type="button" data-filter="all" aria-pressed="true">All studies</button>
+        <button type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
+        <button type="button" data-filter="design" aria-pressed="false">Editable design</button>
+        <button type="button" data-filter="motion" aria-pressed="false">Interaction &amp; motion</button>
+      </div>
+
+      <div class="study-grid">
+        <article class="study-card" data-category="engineering">
+          <div class="study-preview evidence-preview" aria-label="Summary of recorded WordPress checks">
+            <p class="preview-label">WORDPRESS · IN-PROCESS REST</p>
+            <div class="check-total"><strong>7</strong><span>recorded checks</span></div>
+            <div class="evidence-row"><span>Rejected requests</span><b>6</b></div>
+            <div class="evidence-row"><span>Sanitized save</span><b>1</b></div>
+            <small>Recorded fixture results, not production monitoring.</small>
+          </div>
+          <div class="card-copy">
+            <p class="case-type">01 / ENGINEERING</p>
+            <h3>WordPress REST validation</h3>
+            <p>Authorization, input validation and a sanitized save, checked against an isolated WordPress fixture.</p>
+            <details><summary>Evidence &amp; scope</summary><p>Seven recorded in-process REST checks. Live HTTP, cookie authentication, network CSRF and production persistence were not tested. The study links its PHP source and recorded JSON results.</p></details>
+            <a class="study-link" href="https://hxsworrk-lab.github.io/ui-motion-study/wordpress-rest-study/" target="_blank" rel="noopener noreferrer">View the checks <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="study-card" data-category="engineering">
+          <div class="study-preview evidence-preview cleanup-preview" aria-label="Summary of controlled Svelte cleanup comparison">
+            <p class="preview-label">SVELTE 5 · CONTROLLED RESOURCE</p>
+            <p class="comparison-label">Returned cleanup calls after unmount</p>
+            <div class="comparison"><div><span>Async onMount</span><strong>0</strong></div><div><span>Sync onMount</span><strong>1</strong></div></div>
+            <small>Mounted components. Mock resource. Explicit test limits.</small>
+          </div>
+          <div class="card-copy">
+            <p class="case-type">02 / ENGINEERING</p>
+            <h3>Svelte resource cleanup</h3>
+            <p>Compare async and synchronous onMount callbacks using real component lifecycles and a controlled mock resource.</p>
+            <details><summary>Evidence &amp; scope</summary><p>The Svelte 5.23.2 study mounts and destroys real components after setup. Counts refer to cleanup returned from onMount; both onDestroy callbacks ran. No live HTTP/SSE or memory-leak measurement.</p></details>
+            <a class="study-link" href="https://hxsworrk-lab.github.io/browser-cleanup-check/" target="_blank" rel="noopener noreferrer">Open the comparison <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="study-card" data-category="engineering">
+          <div class="study-preview image-preview map-preview"><img src="assets/native-map.png" alt="Native Tiled render of a small pixel-art field crossing" width="512" height="384" loading="lazy"><span class="image-caption">Actual native Tiled render</span></div>
+          <div class="card-copy">
+            <p class="case-type">03 / ENGINEERING</p>
+            <h3>Native Tiled map structure</h3>
+            <p>A 16 × 12 map using 32px tiles, separate layers and editable object geometry.</p>
+            <details><summary>Evidence &amp; scope</summary><p>Tiled 1.12.2 exported and reopened the map through TMX and TMJ. An edited spawn position survived the round trip. This verifies native files and CLI rendering, not GUI editing, engine gameplay or playable collisions.</p></details>
+            <a class="study-link" href="https://github.com/hxsworrk-lab/character-walk-study/tree/main/native-tiled-field-study" target="_blank" rel="noopener noreferrer">Inspect the map &amp; source <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="study-card" data-category="design">
+          <div class="study-preview image-preview design-preview"><img src="assets/supplier-quote.png" alt="Supplier Quote Review: a fictional sourcing interface designed in native Figma" loading="lazy"><span class="image-caption">Static preview of the native Figma concept</span></div>
+          <div class="card-copy">
+            <p class="case-type">04 / EDITABLE DESIGN</p>
+            <h3>Supplier Quote Review</h3>
+            <p>A native Figma interface built with semantic variables, reusable local components and editable text.</p>
+            <details><summary>Evidence &amp; scope</summary><p>The file contains 31 variables and five local components. The public preview is static and uses fictional supplier data. Shared-library publishing and client handoff have not been verified.</p></details>
+            <a class="study-link" href="https://contra.com/p/vXsWRqF3-supplier-quote-review-self-initiated-figma-concept" target="_blank" rel="noopener noreferrer">View the design <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="study-card" data-category="motion">
+          <div class="study-preview image-preview scene-preview"><img src="assets/isometric-concept.svg" alt="Static concept composition for the interactive four-stage isometric scene" loading="lazy"><span class="image-caption">Static concept · open the demo to interact</span></div>
+          <div class="card-copy">
+            <p class="case-type">05 / INTERACTION &amp; MOTION</p>
+            <h3>Interactive 3D flow</h3>
+            <p>A browser-rendered scene with four selectable stages, pointer picking and keyboard controls.</p>
+            <details><summary>Evidence &amp; scope</summary><p>The Three.js/WebGL2 study supports selection, pause and reduced motion. It is a self-contained interaction study; production integration and physical-device performance remain unverified.</p></details>
+            <a class="study-link" href="https://hxsworrk-lab.github.io/ui-motion-study/interactive-isometric/" target="_blank" rel="noopener noreferrer">Try the interactive scene <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="study-card" data-category="motion">
+          <div class="study-preview image-preview walk-preview"><img src="assets/walk-sheet.png" alt="Twelve transparent character-walk frames arranged as a sprite sheet" width="512" height="384" loading="lazy"><span class="image-caption">12-frame code-authored walk study</span></div>
+          <div class="card-copy">
+            <p class="case-type">06 / INTERACTION &amp; MOTION</p>
+            <h3>Character walk, with source</h3>
+            <p>A code-authored walk cycle with transparent PNG exports and editable SVG frames.</p>
+            <details><summary>Evidence &amp; scope</summary><p>This is one walk cycle, not a complete action set or verified engine integration. The artwork is code-authored rather than hand-drawn. The source page shows the individual frames and export method.</p></details>
+            <a class="study-link" href="https://github.com/hxsworrk-lab/character-walk-study" target="_blank" rel="noopener noreferrer">View the frames &amp; source <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+      <noscript><p class="noscript-note">All six studies are shown. Filtering requires JavaScript; every study link works without it.</p></noscript>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div><p class="eyebrow">NEXT STEP</p><h2 id="contact-heading">Discuss a concrete brief.</h2><p>Send the intended result, required file format and deadline. A public link or redacted brief is enough to start.</p><p class="rate">Reference rate: US$25/hour. Scope and total price are agreed before work begins.</p></div>
+      <a class="contact-button" href="mailto:hxsgmail@gmail.com?subject=Project%20scope%20for%20Hx%20Works">Email Hx Works <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Hx Works · Selected self-initiated studies</span><span>Reuse rights vary by study. Check the licence and scope on each source page.</span></footer>
+</body>
+</html>
