@@ -1,0 +1,44 @@
+{
+  "study": "Self-initiated technical speech-level preparation",
+  "source": {
+    "file": "source-english.ogg",
+    "sha256": "96172d8feaed92119a0d400510dda44fd647173288c51369ee473ac524ecc981",
+    "bytes": 873121,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Recording_of_speaker_of_British_English_(Received_Pronunciation).ogg",
+    "duration_seconds": 36.44226757369614
+  },
+  "processing": {
+    "highpass_hz": 60,
+    "loudnorm_passes": 2,
+    "targets": {
+      "integrated_lufs": -19,
+      "max_true_peak_dbtp": -2.5,
+      "lra_parameter_lu": 11
+    },
+    "no_word_or_pause_edits": true
+  },
+  "final_export": {
+    "file": "prepared-english.wav",
+    "sha256": "e857ccd7316a13b789c38a82b1b564a7290a744c6775cba77f78fadeca61b3a5",
+    "bytes": 5248444,
+    "duration_seconds": 36.44227083333333,
+    "sample_rate_hz": 48000,
+    "bits_per_sample": 24,
+    "channels": 1,
+    "integrated_lufs": -19.21,
+    "true_peak_dbtp_reported": -2.5,
+    "loudness_range_lu": 4.1,
+    "full_scale_pcm_samples": 0
+  },
+  "license": {
+    "source_and_adaptation": "CC BY-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "credit": "P. Roach / International Phonetic Association; speaker unnamed"
+  },
+  "limits": [
+    "No auditory quality, natural-rhythm or intelligibility acceptance performed.",
+    "No claim of denoising, de-clicking, breath editing, restoration or transcription accuracy.",
+    "Chosen technical targets are not a buyer specification or ACX compliance claim.",
+    "This self-initiated 36-second study is not a delivered or accepted customer trial."
+  ]
+}
