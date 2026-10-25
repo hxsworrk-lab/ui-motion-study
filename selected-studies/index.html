@@ -43,6 +43,7 @@
         <button type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
         <button type="button" data-filter="design" aria-pressed="false">Editable design</button>
         <button type="button" data-filter="motion" aria-pressed="false">Interaction &amp; motion</button>
+        <button type="button" id="game-assets" data-filter="game-assets" aria-pressed="false">Game asset studies</button>
       </div>
 
       <div class="study-grid">
@@ -79,7 +80,7 @@
           </div>
         </article>
 
-        <article class="study-card" data-category="engineering">
+        <article class="study-card" id="tiled-map" data-category="engineering" data-game-asset>
           <div class="study-preview image-preview map-preview"><img src="assets/native-map.png" alt="Native Tiled render of a small pixel-art field crossing" width="512" height="384" loading="lazy"><span class="image-caption">Actual native Tiled render</span></div>
           <div class="card-copy">
             <p class="case-type">03 / ENGINEERING</p>
@@ -112,13 +113,14 @@
           </div>
         </article>
 
-        <article class="study-card" data-category="motion">
+        <article class="study-card" id="character-walk" data-category="motion" data-game-asset>
           <div class="study-preview image-preview walk-preview"><img src="assets/walk-sheet.png" alt="Twelve transparent character-walk frames arranged as a sprite sheet" width="512" height="384" loading="lazy"><span class="image-caption">12-frame code-authored walk study</span></div>
           <div class="card-copy">
             <p class="case-type">06 / INTERACTION &amp; MOTION</p>
             <h3>Character walk, with source</h3>
             <p>A code-authored walk cycle with transparent PNG exports and editable SVG frames.</p>
             <details><summary>Evidence &amp; scope</summary><p>This is one walk cycle, not a complete action set or verified engine integration. The artwork is code-authored rather than hand-drawn. The source page shows the individual frames and export method.</p></details>
+            <a class="study-link" href="https://github.com/hxsworrk-lab/character-walk-study/blob/main/walk-loop.webp" target="_blank" rel="noopener noreferrer">View animated loop <span aria-hidden="true">↗</span></a>
             <a class="study-link" href="https://github.com/hxsworrk-lab/character-walk-study" target="_blank" rel="noopener noreferrer">View the frames &amp; source <span aria-hidden="true">↗</span></a>
           </div>
         </article>
